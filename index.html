@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Gestor de Tareas</h1>
+      <div>
+        <label for="theme">Tema:</label>
+        <select id="theme">
+          <option value="light">Claro</option>
+          <option value="dark">Oscuro</option>
+        </select>
+      </div>
+    </header>
+    <section class="task-form">
+      <form>
+        <label for="task">Tarea:</label>
+        <input type="text" id="task" name="task" placeholder="Ingrese la tarea" required>
+
+        <label for="due-date">Fecha Límite:</label>
+        <input type="date" id="due-date" name="due-date" required>
+
+        <label for="priority">Prioridad:</label>
+        <select id="priority" name="priority">
+          <option value="alta">Alta</option>
+          <option value="media">Media</option>
+          <option value="baja">Baja</option>
+        </select>
+        <button type="submit">Agregar Tarea</button>
+      </form>
+    </section>
+    <!-- Nueva sección para filtros -->
+    <section class="task-filters">
+      <button id="filter-all">Todas</button>
+      <button id="filter-completed">Completadas</button>
+      <button id="filter-pending">Pendientes</button>
+    </section>
+    <section class="task-list">
+      <ul>
+        <!-- Tareas renderizadas dinámicamente por script.js -->
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
